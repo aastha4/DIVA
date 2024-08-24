@@ -1,0 +1,101 @@
+/* ListProduct.css */
+
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center-align the search bar container */
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%; /* Full width of container */
+    max-width: 400px; /* Maximum width of search bar */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #999;
+}
+
+.listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr; /* Adjusted column widths */
+    gap: 2px; /* Decreased gap between columns */
+    width: 100%;
+    padding: 10px 0;
+    color: #454545;
+    font-size: 15px; /* Adjust font size for headers */
+    font-weight: 600;
+    text-align: center; /* Center-align header text */
+}
+
+.listproduct-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr; /* Adjusted column widths */
+    gap: 2px; /* Decreased gap between columns */
+    align-items: center;
+    padding: 10px 0;
+    text-align: center; /* Center-align product text */
+}
+
+.listproduct-remove-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listproduct-remove-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.listproduct-product-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.listproduct-allproducts {
+    width: 100%;
+    overflow-y: auto;
+}
+
+@media (max-width: 800px) {
+    .list-product {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .listproduct-format-main, .listproduct-format {
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr; /* Adjusted column widths */
+        gap: 2px; /* Further decreased gap between columns for smaller screens */
+        font-size: 12px; /* Smaller font size for better fit */
+    }
+}
